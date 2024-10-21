@@ -1,0 +1,201 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif; /* Use Poppins font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f2f5; /* Light gray background */
+}
+
+.dashboard-container {
+    display: flex; /* Flex container */
+    width: 100%; /* Full width */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Fixed width for sidebar */
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.sidebar-header {
+    padding: 20px; /* Padding around content */
+    background-color: #1a252f; /* Darker background */
+    text-align: center; /* Center text */
+    border-bottom: 1px solid #1a252f; /* Border below header */
+}
+
+.sidebar-nav {
+    flex-grow: 1; /* Take up remaining space */
+}
+
+.sidebar-nav ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.sidebar-nav ul li {
+    border-bottom: 1px solid #1a252f; /* Border between items */
+}
+
+.sidebar-nav ul li a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block level link */
+    padding: 15px 20px; /* Padding around link */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #34495e; /* Change background on hover */
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 20px; /* Padding around content */
+    background-color: #f0f2f5; /* Light gray background */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+.main-header {
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    padding: 20px; /* Padding around content */
+    margin-bottom: 20px; /* Space below header */
+    text-align: center; /* Center text */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dashboard-section {
+    margin-bottom: 20px; /* Space below section */
+    background: #fff; /* White background */
+    padding: 20px; /* Padding around content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dashboard-section h2 {
+    margin-bottom: 10px; /* Space below heading */
+    color: #2c3e50; /* Dark text color */
+}
+
+/* Card Styles */
+.cards {
+    display: flex; /* Flexbox for layout */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Wrap cards to new line */
+}
+
+.card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around content */
+    flex: 1; /* Flex item */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transform */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
+.card h3 {
+    margin: 0 0 10px; /* Space below heading */
+    color: #2c3e50; /* Dark text color */
+}
+
+.card p {
+    font-size: 1.5em; /* Large text */
+    margin: 0; /* No margin */
+    color: #34495e; /* Dark text color */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Space between elements */
+}
+
+form label {
+    font-weight: 600; /* Bold text */
+    color: #2c3e50; /* Dark text color */
+}
+
+form input,
+form textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding inside input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background: #fff; /* White background */
+    transition: border-color 0.3s; /* Smooth border color change */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #34495e; /* Darker border on focus */
+}
+
+form button {
+    padding: 12px 20px; /* Padding inside button */
+    border: none; /* No border */
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+form button:hover {
+    background-color: #1a252f; /* Darker background on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above table */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+table th,
+table td {
+    padding: 15px; /* Padding inside cells */
+    border: 1px solid #ddd; /* Light border */
+    text-align: left; /* Left align text */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+table th {
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Light background for odd rows */
+}
+
+table tbody tr:hover {
+    background-color: #e0e0e0; /* Darker background on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .card {
+        margin-bottom: 20px; /* Space below card */
+    }
+}

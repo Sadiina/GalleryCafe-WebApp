@@ -1,0 +1,493 @@
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for the page */
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* Set font family */
+  color: white; /* Text color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background: url('img/bgimage.jpg') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Cover the entire background */
+  min-height: 100vh; /* Minimum height of the viewport */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Column layout */
+}
+
+nav {
+  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+  color: #fff; /* Text color */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Padding */
+  position: fixed; /* Fixed position */
+  width: 100%; /* Full width */
+  top: 0; /* Top of the page */
+  z-index: 1000; /* Layer on top */
+}
+
+.logo {
+  margin-left: 15px; /* Margin on the left */
+  flex: 0 0 auto; /* Flex properties */
+}
+
+nav ul {
+  list-style: none; /* Remove list styling */
+  display: flex; /* Flexbox layout */
+  gap: 20px; /* Space between items */
+  margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+  display: inline; /* Inline display */
+}
+
+nav ul li a {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-buttons {
+  display: flex; /* Flexbox layout */
+  gap: 10px; /* Space between buttons */
+  margin-right: 15px; /* Margin on the right */
+}
+
+.login-btn {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  border: 1px solid #fff; /* Border */
+  padding: 5px 10px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.login-btn:hover {
+  background-color: #fff; /* Background color on hover */
+  color: #333; /* Text color on hover */
+}
+
+a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.order-now-btn {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  background-color: #28a745; /* Background color */
+  padding: 5px 10px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* No border */
+}
+
+.order-now-btn:hover {
+  background-color: #218838; /* Background color on hover */
+}
+
+section {
+  padding: 100px 50px 50px; /* Padding */
+  text-align: center; /* Center text */
+  background-color: rgb(0, 0, 0); /* Section background color */
+  margin: 20px 0; /* Margin */
+}
+
+#home {
+  color: #ffffff; /* Text color */
+  padding-top: 150px; /* Padding on top */
+}
+
+.home-content {
+  padding-top: 50vh; /* Padding on top */
+  position: relative; /* Relative position */
+  top: 50%; /* Position from top */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.home-content .description {
+  font-size: 1.1em; /* Font size */
+  margin-top: 70px; /* Margin on top */
+  margin-bottom: -300px; /* Margin on bottom */
+  color: #fff; /* Text color */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for description */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.promotions-grid {
+  display: flex; /* Flexbox layout */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+}
+
+.promotion-item {
+  color: black; /* Text color */
+  border: 1px solid #ddd; /* Border */
+  padding: 30px; /* Padding */
+  border-radius: 10px; /* Rounded corners */
+  width: 30%; /* Width */
+  text-align: center; /* Center text */
+  background-color: #fff; /* Background color */
+}
+
+.promotion-item img {
+  width: 240px; /* Image width */
+  height: 400px; /* Image height */
+  object-fit: cover; /* Cover object fit */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.ta {
+  font-size: x-small; /* Font size */
+}
+
+h3 {
+  color: white; /* Text color */
+}
+
+.menu-grid {
+  display: flex; /* Flexbox layout */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+}
+
+.menu-item {
+  border: 1px solid #ddd; /* Border */
+  padding: 166px; /* Padding */
+  border-radius: 15px; /* Rounded corners */
+  width: 30%; /* Width */
+  text-align: center; /* Center text */
+  background-color: #636363; /* Background color */
+  overflow: hidden; /* Hide overflow */
+}
+
+.menu-item img {
+  width: 100%; /* Full width */
+  height: 200px; /* Height */
+  object-fit: cover; /* Cover object fit */
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth transform */
+}
+
+.menu-item:hover img {
+  transform: scale(1.5); /* Image zoom effect on hover */
+}
+
+.items-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+}
+
+.item {
+  border: 1px solid #000000; /* Border */
+  padding: 10px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text */
+  background-color: #fff; /* Background color */
+  overflow: hidden; /* Hide overflow */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.item img {
+  width: 100%; /* Full width */
+  height: 150px; /* Height */
+  object-fit: cover; /* Cover object fit */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.item input[type="checkbox"] {
+  display: none; /* Hide checkbox */
+}
+
+.item.selected {
+  background-color: #ffa500; /* Background color when selected */
+  color: white; /* Text color when selected */
+}
+
+form {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px; /* Space between elements */
+  align-items: center; /* Center elements */
+}
+
+form input,
+form textarea {
+  width: 50%; /* Width */
+  padding: 10px; /* Padding */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+form button {
+  padding: 10px 20px; /* Padding */
+  border: none; /* No border */
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+form button:hover {
+  background-color: #555; /* Background color on hover */
+}
+
+.footer {
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 40px 0; /* Padding */
+  width: 100%; /* Full width */
+}
+
+.footer .container03 {
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.footer .row {
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Wrap items */
+}
+
+.footer .footer-col {
+  flex: 1; /* Flex grow */
+  margin: 10px; /* Margin */
+  min-width: 200px; /* Minimum width */
+}
+
+.footer .footer-col h4 {
+  font-size: 18px; /* Font size */
+  margin-bottom: 15px; /* Margin on bottom */
+  position: relative; /* Relative position */
+  padding-bottom: 5px; /* Padding on bottom */
+  border-bottom: 1px solid #fff; /* Border on bottom */
+}
+
+.footer .footer-col ul {
+  list-style: none; /* Remove list styling */
+  padding: 0; /* Remove padding */
+}
+
+.footer .footer-col ul li {
+  margin-bottom: 10px; /* Margin on bottom */
+}
+
+.footer .footer-col ul li a {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.footer .footer-col ul li a:hover {
+  color: #ffa500; /* Text color on hover */
+}
+
+.footer .social-media {
+  display: flex; /* Flexbox layout */
+  gap: 10px; /* Space between items */
+}
+
+.footer .social-media a {
+  color: #fff; /* Text color */
+  font-size: 20px; /* Font size */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.footer .social-media a:hover {
+  color: #ffa500; /* Text color on hover */
+}
+
+.container {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.login-box {
+  background: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+  padding: 2rem; /* Padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 300px; /* Fixed width */
+}
+
+.login-box h2 {
+  margin-bottom: 1rem; /* Margin on bottom */
+  color: #fff; /* Text color */
+  text-align: center; /* Center text */
+}
+
+.input-box {
+  margin-bottom: 1rem; /* Margin on bottom */
+}
+
+.input-box label {
+  display: block; /* Block level */
+  margin-bottom: 0.5rem; /* Margin on bottom */
+  color: #ccc; /* Text color */
+}
+
+.input-box input,
+.input-box select {
+  width: 100%; /* Full width */
+  padding: 0.5rem; /* Padding */
+  border: 1px solid #666; /* Border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  color: #fff; /* Text color */
+}
+
+.back {
+  margin-right: 100px; /* Margin on the right */
+}
+
+.input-box select {
+  -webkit-appearance: none; /* Remove default appearance */
+  -moz-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+}
+
+button {
+  width: 100%; /* Full width */
+  padding: 0.75rem; /* Padding */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  background: #007BFF; /* Background color */
+  color: #fff; /* Text color */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background 0.3s; /* Smooth background change */
+}
+
+button:hover {
+  background: #0056b3; /* Background color on hover */
+}
+
+#checkout {
+  background-color: #fff; /* Background color */
+  padding: 20px; /* Padding */
+  border-radius: 10px; /* Rounded corners */
+  max-width: 800px; /* Maximum width */
+  margin: auto; /* Center horizontally */
+  color: #333; /* Text color */
+}
+
+#checkout h2, #checkout h3 {
+  margin-top: 0; /* Remove top margin */
+}
+
+#checkout-form {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px; /* Space between elements */
+}
+
+#checkout-form label {
+  font-weight: 600; /* Bold text */
+}
+
+#checkout-form input, #checkout-form textarea, #checkout-form select {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+#checkout-form button {
+  padding: 10px 20px; /* Padding */
+  border: none; /* No border */
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+#checkout-form button:hover {
+  background-color: #555; /* Background color on hover */
+}
+
+.order-summary table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapse borders */
+  margin-bottom: 20px; /* Margin on bottom */
+}
+
+.order-summary th, .order-summary td {
+  padding: 10px; /* Padding */
+  border: 1px solid #ddd; /* Border */
+  text-align: left; /* Left align text */
+}
+
+.order-summary th {
+  background-color: #333; /* Background color */
+  color: white; /* Text color */
+}
+
+.order-summary tfoot tr td {
+  font-weight: bold; /* Bold text */
+}
+
+#thank-you {
+  background-color: #fff; /* Background color */
+  padding: 20px; /* Padding */
+  border-radius: 10px; /* Rounded corners */
+  max-width: 800px; /* Maximum width */
+  margin: auto; /* Center horizontally */
+  color: #333; /* Text color */
+}
+
+#thank-you h2, #thank-you p {
+  margin-top: 0; /* Remove top margin */
+}
+
+.registration-form {
+  background: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+  padding: 30px; /* Padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 400px; /* Maximum width */
+  margin: 150px auto 0 auto; /* Center horizontally and margin on top */
+  text-align: center; /* Center text */
+}
+
+.registration-form h2 {
+  margin-bottom: 20px; /* Margin on bottom */
+  color: #fff; /* Text color */
+}
+
+.input-form input {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding */
+  margin: 10px 0; /* Margin on top and bottom */
+  border: 1px solid #666; /* Border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  color: #fff; /* Text color */
+}
+
+.register-btn {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding */
+  background-color: #007BFF; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+.register-btn:hover {
+  background-color: #0056b3; /* Background color on hover */
+}
+
+.error-message {
+  color: red; /* Text color */
+  margin-bottom: 15px; /* Margin on bottom */
+  display: none; /* Hide by default */
+  text-align: center; /* Center text */
+}

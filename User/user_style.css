@@ -1,0 +1,520 @@
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* Sets the font family */
+  color: white; /* Sets the text color */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  background: url('img/bgimage.jpg') no-repeat center center fixed; /* Sets the background image */
+  background-size: cover; /* Covers the entire background with the image */
+  min-height: 100vh; /* Sets the minimum height to 100% of the viewport height */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges flex items in a column */
+}
+
+nav {
+  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+  color: #fff; /* Text color */
+  display: flex; /* Enables flexbox layout */
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center; /* Centers items vertically */
+  padding: 10px; /* Adds padding */
+  position: fixed; /* Fixes the nav at the top */
+  width: 100%; /* Sets width to 100% */
+  top: 0; /* Aligns nav to the top */
+  z-index: 1000; /* Ensures nav is above other elements */
+}
+
+.logo {
+  margin-left: 15px; /* Adds left margin */
+  flex: 0 0 auto; /* Prevents flex growth or shrink */
+}
+
+nav ul {
+  list-style: none; /* Removes default list styling */
+  display: flex; /* Enables flexbox layout */
+  gap: 20px; /* Adds gap between list items */
+  margin: 0; /* Removes default margin */
+}
+
+nav ul li {
+  display: inline; /* Displays list items inline */
+}
+
+nav ul li a {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Removes underline */
+}
+
+.nav-buttons {
+  display: flex; /* Enables flexbox layout */
+  gap: 10px; /* Adds gap between buttons */
+  margin-right: 15px; /* Adds right margin */
+}
+
+.login-btn {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Removes underline */
+  border: 1px solid #fff; /* Adds white border */
+  padding: 5px 10px; /* Adds padding */
+  border-radius: 5px; /* Rounds corners */
+}
+
+.login-btn:hover {
+  background-color: #fff; /* Changes background color on hover */
+  color: #333; /* Changes text color on hover */
+}
+
+a {
+  color: white; /* Sets link color to white */
+  text-decoration: none; /* Removes underline */
+}
+
+.order-now-btn {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Removes underline */
+  background-color: #28a745; /* Sets background color */
+  padding: 5px 10px; /* Adds padding */
+  border-radius: 5px; /* Rounds corners */
+  border: none; /* Removes border */
+}
+
+.order-now-btn:hover {
+  background-color: #218838; /* Changes background color on hover */
+}
+
+section {
+  padding: 100px 50px 50px; /* Adds padding */
+  text-align: center; /* Centers text */
+  background-color: rgb(0, 0, 0); /* Sets background color */
+  margin: 20px 0; /* Adds margin */
+}
+
+#home {
+  color: #ffffff; /* Sets text color to white */
+  padding-top: 150px; /* Adds top padding */
+}
+
+.home-content {
+  padding-top: 50vh; /* Adds top padding */
+  position: relative; /* Positions element relative to its normal position */
+  top: 50%; /* Moves element down by 50% */
+  transform: translateY(-50%); /* Centers element vertically */
+}
+
+.home-content .description {
+  font-size: 1.1em; /* Sets font size */
+  margin-top: 70px; /* Adds top margin */
+  margin-bottom: -300px; /* Adds negative bottom margin */
+  color: #fff; /* Sets text color to white */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 10px; /* Rounds corners */
+}
+
+.promotions-grid {
+  display: flex; /* Enables flexbox layout */
+  gap: 20px; /* Adds gap between items */
+  justify-content: center; /* Centers items horizontally */
+}
+
+.promotion-item {
+  color: black; /* Sets text color */
+  border: 1px solid #ddd; /* Adds border */
+  padding: 30px; /* Adds padding */
+  border-radius: 10px; /* Rounds corners */
+  width: 30%; /* Sets width */
+  text-align: center; /* Centers text */
+  background-color: #fff; /* Sets background color */
+}
+
+.promotion-item img {
+  width: 240px; /* Sets image width */
+  height: 400px; /* Sets image height */
+  object-fit: cover; /* Covers the entire area */
+  border-radius: 5px; /* Rounds corners */
+}
+
+.ta {
+  font-size: x-small; /* Sets font size */
+}
+
+h3 {
+  color: black; /* Sets text color */
+}
+
+.menu-grid {
+  display: flex; /* Enables flexbox layout */
+  gap: 20px; /* Adds gap between items */
+  justify-content: center; /* Centers items horizontally */
+}
+
+.menu-item {
+  border: 1px solid #ddd; /* Adds border */
+  padding: 166px; /* Adds padding */
+  border-radius: 15px; /* Rounds corners */
+  width: 30%; /* Sets width */
+  text-align: center; /* Centers text */
+  background-color: #636363; /* Sets background color */
+  overflow: hidden; /* Hides overflow */
+}
+
+.menu-item img {
+  width: 100%; /* Sets width to 100% */
+  height: 200px; /* Sets height */
+  object-fit: cover; /* Covers the entire area */
+  border-radius: 5px; /* Rounds corners */
+  transition: transform 0.3s ease; /* Adds transition effect */
+}
+
+.menu-item:hover img {
+  transform: scale(1.5); /* Zooms image on hover */
+}
+
+.items-grid {
+  display: grid; /* Enables grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+  gap: 20px; /* Adds gap between items */
+  justify-content: center; /* Centers items horizontally */
+}
+
+.item {
+  border: 1px solid #000000; /* Adds border */
+  padding: 10px; /* Adds padding */
+  border-radius: 5px; /* Rounds corners */
+  text-align: center; /* Centers text */
+  background-color: #fff; /* Sets background color */
+  overflow: hidden; /* Hides overflow */
+  cursor: pointer; /* Changes cursor to pointer */
+  transition: background-color 0.3s ease; /* Adds transition effect */
+}
+
+.item img {
+  width: 100%; /* Sets width to 100% */
+  height: 150px; /* Sets height */
+  object-fit: cover; /* Covers the entire area */
+  border-radius: 5px; /* Rounds corners */
+}
+
+.item input[type="checkbox"] {
+  display: none; /* Hides checkbox */
+}
+
+.item.selected {
+  background-color: #ffa500; /* Changes background color when selected */
+  color: white; /* Changes text color */
+}
+
+form {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges items in a column */
+  gap: 10px; /* Adds gap between items */
+  align-items: center; /* Centers items */
+}
+
+form input,
+form textarea {
+  width: 50%; /* Sets width to 50% */
+  padding: 10px; /* Adds padding */
+  border: 1px solid #ccc; /* Adds border */
+  border-radius: 5px; /* Rounds corners */
+}
+
+form button {
+  padding: 10px 20px; /* Adds padding */
+  border: none; /* Removes border */
+  background-color: #333; /* Sets background color */
+  color: #fff; /* Sets text color */
+  border-radius: 5px; /* Rounds corners */
+  cursor: pointer; /* Changes cursor to pointer */
+}
+
+form button:hover {
+  background-color: #555; /* Changes background color on hover */
+}
+
+.footer {
+  background-color: #333; /* Sets background color */
+  color: #fff; /* Sets text color */
+  padding: 40px 0; /* Adds padding */
+  width: 100%; /* Sets width to 100% */
+}
+
+.footer .container03 {
+  max-width: 1200px; /* Sets max width */
+  margin: 0 auto; /* Centers container */
+}
+
+.footer .row {
+  display: flex; /* Enables flexbox layout */
+  flex-wrap: wrap; /* Allows wrapping of items */
+}
+
+.footer .footer-col {
+  flex: 1; /* Allows flex growth */
+  margin: 10px; /* Adds margin */
+  min-width: 200px; /* Sets minimum width */
+}
+
+.footer .footer-col h4 {
+  font-size: 18px; /* Sets font size */
+  margin-bottom: 15px; /* Adds bottom margin */
+  position: relative; /* Sets relative positioning */
+  padding-bottom: 5px; /* Adds bottom padding */
+  border-bottom: 1px solid #fff; /* Adds bottom border */
+}
+
+.footer .footer-col ul {
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes padding */
+}
+
+.footer .footer-col ul li {
+  margin-bottom: 10px; /* Adds bottom margin */
+}
+
+.footer .footer-col ul li a {
+  color: #fff; /* Sets link color */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease; /* Adds transition effect */
+}
+
+.footer .footer-col ul li a:hover {
+  color: #ffa500; /* Changes link color on hover */
+}
+
+.footer .social-media {
+  display: flex; /* Enables flexbox layout */
+  gap: 10px; /* Adds gap between items */
+}
+
+.footer .social-media a {
+  color: #fff; /* Sets link color */
+  font-size: 20px; /* Sets font size */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease; /* Adds transition effect */
+}
+
+.footer .social-media a:hover {
+  color: #ffa500; /* Changes link color on hover */
+}
+
+.container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  height: 100vh; /* Sets height to 100% of viewport height */
+}
+
+.login-box {
+  background: rgba(51, 51, 51, 0.9); /* Sets background color */
+  padding: 2rem; /* Adds padding */
+  border-radius: 8px; /* Rounds corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow */
+  width: 300px; /* Sets width */
+}
+
+.login-box h2 {
+  margin-bottom: 1rem; /* Adds bottom margin */
+  color: #fff; /* Sets text color */
+  text-align: center; /* Centers text */
+}
+
+.input-box {
+  margin-bottom: 1rem; /* Adds bottom margin */
+}
+
+.input-box label {
+  display: block; /* Displays label as block */
+  margin-bottom: 0.5rem; /* Adds bottom margin */
+  color: #ccc; /* Sets text color */
+}
+
+.input-box input,
+.input-box select {
+  width: 100%; /* Sets width to 100% */
+  padding: 0.5rem; /* Adds padding */
+  border: 1px solid #666; /* Adds border */
+  border-radius: 4px; /* Rounds corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Sets background color */
+  color: #fff; /* Sets text color */
+}
+
+.back {
+  margin-right: 100px; /* Adds right margin */
+}
+
+.input-box select {
+  -webkit-appearance: none; /* Removes default styling */
+  -moz-appearance: none; /* Removes default styling */
+  appearance: none; /* Removes default styling */
+}
+
+button {
+  width: 100%; /* Sets width to 100% */
+  padding: 0.75rem; /* Adds padding */
+  border: none; /* Removes border */
+  border-radius: 4px; /* Rounds corners */
+  background: #007BFF; /* Sets background color */
+  color: #fff; /* Sets text color */
+  font-size: 1rem; /* Sets font size */
+  cursor: pointer; /* Changes cursor to pointer */
+  transition: background 0.3s; /* Adds transition effect */
+}
+
+button:hover {
+  background: #0056b3; /* Changes background color on hover */
+}
+
+#checkout {
+  background-color: #fff; /* Sets background color */
+  padding: 20px; /* Adds padding */
+  border-radius: 10px; /* Rounds corners */
+  max-width: 800px; /* Sets max width */
+  margin: auto; /* Centers element */
+  color: #333; /* Sets text color */
+}
+
+#checkout h2, #checkout h3 {
+  margin-top: 0; /* Removes top margin */
+}
+
+#checkout-form {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges items in a column */
+  gap: 10px; /* Adds gap between items */
+}
+
+#checkout-form label {
+  font-weight: 600; /* Sets font weight */
+}
+
+#checkout-form input, #checkout-form textarea, #checkout-form select {
+  width: 100%; /* Sets width to 100% */
+  padding: 10px; /* Adds padding */
+  border: 1px solid #ccc; /* Adds border */
+  border-radius: 5px; /* Rounds corners */
+}
+
+#checkout-form button {
+  padding: 10px 20px; /* Adds padding */
+  border: none; /* Removes border */
+  background-color: #333; /* Sets background color */
+  color: #fff; /* Sets text color */
+  border-radius: 5px; /* Rounds corners */
+  cursor: pointer; /* Changes cursor to pointer */
+}
+
+#checkout-form button:hover {
+  background-color: #555; /* Changes background color on hover */
+}
+
+.order-summary table {
+  width: 100%; /* Sets width to 100% */
+  border-collapse: collapse; /* Collapses borders */
+  margin-bottom: 20px; /* Adds bottom margin */
+}
+
+.order-summary th, .order-summary td {
+  padding: 10px; /* Adds padding */
+  border: 1px solid #ddd; /* Adds border */
+  text-align: left; /* Aligns text to the left */
+}
+
+.order-summary th {
+  background-color: #333; /* Sets background color */
+  color: white; /* Sets text color */
+}
+
+.order-summary tfoot tr td {
+  font-weight: bold; /* Sets font weight */
+}
+
+#thank-you {
+  background-color: #fff; /* Sets background color */
+  padding: 20px; /* Adds padding */
+  border-radius: 10px; /* Rounds corners */
+  max-width: 800px; /* Sets max width */
+  margin: auto; /* Centers element */
+  color: #333; /* Sets text color */
+}
+
+#thank-you h2, #thank-you p {
+  margin-top: 0; /* Removes top margin */
+}
+
+.container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  min-height: 100vh; /* Sets minimum height */
+  background-color: #f7f7f7; /* Sets background color */
+}
+
+.login-box, .registration-box {
+  background-color: #fff; /* Sets background color */
+  padding: 20px; /* Adds padding */
+  border-radius: 10px; /* Rounds corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
+  max-width: 400px; /* Sets max width */
+  width: 100%; /* Sets width to 100% */
+  text-align: center; /* Centers text */
+}
+
+.login-box h2, .registration-box h2 {
+  margin-bottom: 20px; /* Adds bottom margin */
+}
+
+.input-box {
+  margin-bottom: 15px; /* Adds bottom margin */
+  text-align: left; /* Aligns text to the left */
+}
+
+.input-box label {
+  display: block; /* Displays label as block */
+  margin-bottom: 5px; /* Adds bottom margin */
+}
+
+.input-box input {
+  width: 100%; /* Sets width to 100% */
+  padding: 10px; /* Adds padding */
+  border: 1px solid #ccc; /* Adds border */
+  border-radius: 5px; /* Rounds corners */
+}
+
+button {
+  width: 100%; /* Sets width to 100% */
+  padding: 10px; /* Adds padding */
+  background-color: #333; /* Sets background color */
+  color: #fff; /* Sets text color */
+  border: none; /* Removes border */
+  border-radius: 5px; /* Rounds corners */
+  cursor: pointer; /* Changes cursor to pointer */
+}
+
+button:hover {
+  background-color: #555; /* Changes background color on hover */
+}
+
+.error-message {
+  color: red; /* Sets text color */
+  margin-bottom: 10px; /* Adds bottom margin */
+}
+
+.nav-buttons .logout-btn {
+  background-color: #f44336; /* Sets background color */
+  color: white; /* Sets text color */
+  padding: 10px 20px; /* Adds padding */
+  text-align: center; /* Centers text */
+  text-decoration: none; /* Removes underline */
+  display: inline-block; /* Displays as inline-block */
+  margin-top: 5px; /* Adds top margin */
+  border-radius: 5px; /* Rounds corners */
+  font-size: 14px; /* Sets font size */
+  transition: background-color 0.3s ease; /* Adds transition effect */
+}
+
+.nav-buttons .logout-btn:hover {
+  background-color: #d32f2f; /* Changes background color on hover */
+}
